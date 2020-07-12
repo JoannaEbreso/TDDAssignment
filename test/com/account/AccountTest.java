@@ -33,7 +33,7 @@ class AccountTest {
     }
 
     @Test
-    void accountObjectWillNotTakeNegativeAmountTest(){
+    void accountObjectWillNotTakeNegativeAmountDepositTest(){
         account.depositMoney(5000);
         account.depositMoney(-1500);
         int accountBalance = account.getAccountBalance();
@@ -41,51 +41,69 @@ class AccountTest {
     }
 
     @Test
-    void accountObjectCanWithdrawCash(){
+    void accountObjectCanWithdrawCash() throws Exception {
+        account.setAccountPin(1345);
         account.depositMoney(5000);
-        account.withdrawMoney(2000);
+        account.withdrawMoney(2000,1345);
         assertEquals(3000,account.getAccountBalance());
     }
 
     @Test
-    void accountObjectCannotWithdrawANegativeAmount(){
-        account.depositMoney(5000);
-        account.withdrawMoney(-2000);
-        assertEquals(5000,account.getAccountBalance());
+    void accountObjectCannotWithdrawANegativeAmount() throws Exception {
+        try {
+            account.setAccountPin(1345);
+            account.depositMoney(5000);
+            account.withdrawMoney(-2000, 1345);
+        }
+        catch(Exception e){
+            assertEquals("You can't withdraw an amount that is less than or equal to zero",e.getMessage());
+        }
+       // assertEquals(5000,account.getAccountBalance());
     }
 
     @Test
-    void accountObjectCannotWithdrawMoreThanBalance(){
-        account.depositMoney(7000);
-        account.withdrawMoney(8000);
-        assertEquals("You can't withdraw an amount that is more than your balance",account.getErrorMessage());
+    void accountObjectCannotWithdrawMoreThanBalance() throws Exception {
+        try {
+            account.setAccountPin(1345);
+            account.depositMoney(7000);
+            account.withdrawMoney(8000, 1345);
+        }
+        catch(Exception e){assertEquals("You can't withdraw an amount that is more than your balance",e.getMessage());}
+       // assertEquals("You can't withdraw an amount that is more than your balance",account.getErrorMessage());
     }
 
     @Test
-    void accountObjectWithdrawsOnlyWithin1000BalanceLimit(){
-        account.depositMoney(5000);
-        account.withdrawMoney(4000);
-        account.withdrawMoney(800);
-        assertEquals("You have 1000v left, you can't withdraw from it",account.getErrorMessage());
+    void accountObjectWithdrawsOnlyWithin1000BalanceLimit() throws Exception {
+        try {
+            account.setAccountPin(1345);
+            account.depositMoney(5000);
+            account.withdrawMoney(4000, 1345);
+            account.withdrawMoney(800, 1345);
+        }
+        catch(Exception e){assertEquals("You have 1000 left, you can't withdraw from it",e.getMessage());}
+        //assertEquals("You have 1000 left, you can't withdraw from it",account.getErrorMessage());
     }
 
     @Test
-    void accountObjectCanSetAPin(){
+    void accountObjectCanSetAPin() throws Exception {
         account.setAccountPin(1234);
-        assertEquals(1234,account.getPin());
+        assertEquals(1234,account.getAccountPin());
     }
 
     @Test
-    void accountObjectTakesOnlyFourDigitsForAPin(){
-        account.setAccountPin(1);
-        assertEquals("Your pin has to be a four(4) digit number",account.getErrorMessage());
-
-        account.setAccountPin(10000000);
-        assertEquals("Your pin has to be a four(4) digit number",account.getErrorMessage());
+    void accountObjectTakesOnlyFourDigitsForAPin() throws Exception {
+       try{
+           account.setAccountPin(1);
+           account.setAccountPin(10000000);
+       }
+       catch (Exception e){
+         assertEquals("Your pin has to be a four(4) digit number",e.getMessage());
+       }
+       // assertEquals("Your pin has to be a four(4) digit number",account.getErrorMessage());
     }
 
     @Test
-    void accountObjectWithdrawsWithPin(){
+    void accountObjectWithdrawsWithPin() throws Exception {
         account.setAccountPin(1345);
         account.depositMoney(5000);
         account.withdrawMoney(2000,1345);
