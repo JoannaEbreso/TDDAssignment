@@ -34,17 +34,17 @@ class AccountTest {
 
     @Test
     void accountObjectWillNotTakeNegativeAmountDepositTest(){
-        account.depositMoney(5000);
-        account.depositMoney(-1500);
+        account.depositMoney(6000);
+        account.depositMoney(-1300);
         int accountBalance = account.getAccountBalance();
-        assertEquals(5000,accountBalance);
+        assertEquals(6000,accountBalance);
     }
 
     @Test
     void accountObjectCanWithdrawCash() throws Exception {
-        account.setAccountPin(1345);
+        account.setAccountPin(1344);
         account.depositMoney(5000);
-        account.withdrawMoney(2000,1345);
+        account.withdrawMoney(2000,1344);
         assertEquals(3000,account.getAccountBalance());
     }
 
