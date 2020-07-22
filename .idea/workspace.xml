@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1945f98-665f-4466-81ad-0441a9657d42" name="Default Changelist" comment="" />
+    <list default="true" id="a1945f98-665f-4466-81ad-0441a9657d42" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classProject/com/account/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classProject/com/account/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classProject/com/account/AccountTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classProject/com/account/AccountTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,15 +17,19 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1e2bRbG5uUWPmlAPArnbOrQW4tU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -33,10 +41,11 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaPrograms/src/progress" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -50,7 +59,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest">
+  <component name="RunManager" selected="JUnit.AccountTest.accountObjectDoesNotAcceptWrongPin">
     <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="classProject" />
       <extension name="coverage">
@@ -66,7 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.accountObjectCannotWithdrawMoreThanBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountTest.accountObjectCannotWithdrawANegativeAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="classProject" />
       <extension name="coverage">
         <pattern>
@@ -76,7 +85,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.account" />
       <option name="MAIN_CLASS_NAME" value="com.account.AccountTest" />
-      <option name="METHOD_NAME" value="accountObjectCannotWithdrawMoreThanBalance" />
+      <option name="METHOD_NAME" value="accountObjectCannotWithdrawANegativeAmount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest.accountObjectDoesNotAcceptWrongPin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="classProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.account.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.account" />
+      <option name="MAIN_CLASS_NAME" value="com.account.AccountTest" />
+      <option name="METHOD_NAME" value="accountObjectDoesNotAcceptWrongPin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,29 +139,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.accountObjectWithdrawsWithPin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="classProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.account.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.account" />
-      <option name="MAIN_CLASS_NAME" value="com.account.AccountTest" />
-      <option name="METHOD_NAME" value="accountObjectWithdrawsWithPin" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.accountObjectDoesNotAcceptWrongPin" />
         <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.accountObjectWithdrawsOnlyWithin1000BalanceLimit" />
-        <item itemvalue="JUnit.AccountTest.accountObjectCannotWithdrawMoreThanBalance" />
-        <item itemvalue="JUnit.AccountTest.accountObjectWithdrawsWithPin" />
+        <item itemvalue="JUnit.AccountTest.accountObjectCannotWithdrawANegativeAmount" />
         <item itemvalue="JUnit.AccountTest.accountObjectTakesOnlyFourDigitsForAPin" />
+        <item itemvalue="JUnit.AccountTest.accountObjectWithdrawsOnlyWithin1000BalanceLimit" />
       </list>
     </recent_temporary>
   </component>
@@ -154,34 +163,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1593622257823">
+    <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1594057470580">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1593622257823" />
-    <state width="1323" height="171" key="GridCell.Tab.0.bottom" timestamp="1593621273674">
+    <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1594057470580" />
+    <state width="1323" height="171" key="GridCell.Tab.0.bottom" timestamp="1594574482811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593621273674" />
-    <state width="1323" height="171" key="GridCell.Tab.0.center" timestamp="1593621273673">
+    <state width="1323" height="171" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594574482811" />
+    <state width="1323" height="171" key="GridCell.Tab.0.center" timestamp="1594574482811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593621273673" />
-    <state width="1323" height="171" key="GridCell.Tab.0.left" timestamp="1593621273673">
+    <state width="1323" height="171" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1594574482811" />
+    <state width="1323" height="171" key="GridCell.Tab.0.left" timestamp="1594574482811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593621273673" />
-    <state width="1323" height="171" key="GridCell.Tab.0.right" timestamp="1593621273673">
+    <state width="1323" height="171" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1594574482811" />
+    <state width="1323" height="171" key="GridCell.Tab.0.right" timestamp="1594574482811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593621273673" />
+    <state width="1323" height="171" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1594574482811" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1593538051858">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1593538051858" />
-    <state x="359" y="207" key="com.intellij.ide.util.TipDialog" timestamp="1593621334352">
+    <state x="359" y="207" key="com.intellij.ide.util.TipDialog" timestamp="1594692214543">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="359" y="207" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1593621334352" />
+    <state x="359" y="207" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1594692214543" />
     <state x="182" y="332" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1593523521864">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -190,5 +199,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="248" y="120" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.768@0.0.1366.768" timestamp="1593523746593" />
+    <state x="65" y="0" key="new project wizard" timestamp="1594692555990">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.768@0.0.1366.768" timestamp="1594692555990" />
   </component>
 </project>

@@ -103,6 +103,19 @@ class AccountTest {
     }
 
     @Test
+    void accountObjectDoesNotAcceptWrongPin(){
+    	try{
+	    account.setAccountPin(4711);
+	    account.depositMoney(5000);
+	    account.withdrawMoney(4000,1345);
+	}
+	catch(Exception e){
+	    assertEquals("That's a wrong pin",e.getMessage());
+	}
+
+    }
+
+    @Test
     void accountObjectWithdrawsWithPin() throws Exception {
         account.setAccountPin(1345);
         account.depositMoney(5000);

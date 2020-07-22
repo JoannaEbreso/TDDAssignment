@@ -15,7 +15,6 @@ public class Account {
         return accountBalance;
     }
 
-//@todo Aunty Joanna, you forgot to throw an exception for wrong pin
     public void withdrawMoney(int amount, int accountPin) throws Exception{
         if (this.accountPin == accountPin){
             if(accountBalance <= 1000){
@@ -31,7 +30,11 @@ public class Account {
             else{
                 accountBalance -= amount;
             }
-        } //@todo you should be throwing it here
+        } 
+	else{
+		throw new Exception("That's a wrong pin");
+	}
+
     }
 
 
